@@ -104,5 +104,25 @@ df1.loc[dates[0]:dates[1], 'E'] = 1
 
 print(df1)
 
+print(df1.dropna(how='any'))
+
+print(df1.fillna(value=5))
+
+print(pd.isna(df1))
+
+print(df.mean())
+
+print(df.mean(1))
+
+s = pd.Series([1, 3, 5, np.nan, 6, 8], index=dates).shift(2)
+
+print(s)
+print(df.sub(s, axis='index'))
+
+print(df.apply(np.cumsum))
+print(df.apply(lambda x: x.max() - x.min()))
+
+
+
 
 
